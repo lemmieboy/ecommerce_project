@@ -1,8 +1,10 @@
 class Order < ActiveRecord::Base
-  attr_accessible :customer_id, :order_price, :product_id, :quantity
+  attr_accessible :customer_id, :status, :tax_rate
+  has_many :line_items
+  has_many :products, :through => :line_items
   belongs_to :customer
-  has_one :product
 
-  validates :customer_id, :order_price, :product_id, :quantity, :presence => true
-  validates :quantity, :numericality => true
+  validates :tax_rate, :status, :presence => true
+
+
 end

@@ -1,7 +1,7 @@
 class Province < ActiveRecord::Base
-  attr_accessible :name, :province_id
+  attr_accessible :name
 
   has_many :customers
 
-  validates :name, :province_id, :presence => true
+  validates :name, :presence => true
 end
