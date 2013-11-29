@@ -1,8 +1,15 @@
 EcommerceProject::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
+
+  root :to => 'products#index', :via => :get
+
   ActiveAdmin.routes(self)
 
-  get "products/index"
+  # get "products/index"
+
+
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
