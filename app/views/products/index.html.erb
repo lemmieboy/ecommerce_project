@@ -1,3 +1,8 @@
-<h1><%= image_tag("grandmalogo.jpg", :alt => "rss feed,", :height => "60px", :width => "60px") %>GrandMa's Noodle House</h1>
+<div id="logo">
+	<%= image_tag("grandmalogo.jpg", :alt => "rss feed,", :height => "60px", :width => "60px") %>
+	<h1>GrandMa's Noodle House (祖母的面馆)</h1>
+</div>
 
-<p>Find me in app/views/products/index.html.erb</p>
+<h2>Product Listing</h2>
+
+<%= render 'products' %>

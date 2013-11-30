@@ -3,14 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
+	font-family: "Comic Sans MS";	
     height: 100%;
+    width: 85%;
 }
 
 body {
 	margin-left: 10px;
+	background-color: #ffcc00;
+	margin-left: 12%;
+	margin-right: 12%;
+	width: 95%;
 }
 
-p {
-	font-family: sans-serif;
+img {
+	float: left;
+	margin-right: 10px;
+
+}
+
+h1 {
+	font-family: "Comic Sans MS";
 	color: red;
+	margin-left: 10px;
+}
+
+h2 {
+	font-family: "Comic Sans MS";
+	color: red;
+}
+
+p#desc {
+	width: 72%;
+	text-align: justify;
+	float: left;
+	margin-left: 10px;
+}
+
+
+#price {
+	float: right;
+	padding-left: 10px;
+}
+
+#products {
+	height: 175px;
+	margin-top: 10px;
 }
