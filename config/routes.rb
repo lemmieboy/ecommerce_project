@@ -3,6 +3,9 @@ EcommerceProject::Application.routes.draw do
 
   root :to => 'products#index', :via => :get
 
+  match 'search_results' => 'products#search_results',
+        :as => 'search_results', :via => :post
+
   ActiveAdmin.routes(self)
 
   # get "products/index"
