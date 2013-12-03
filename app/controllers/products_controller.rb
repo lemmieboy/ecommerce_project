@@ -17,4 +17,8 @@ class ProductsController < ApplicationController
     @products = Product.where("name LIKE '%#{params[:keywords]}%' AND category_id = #{params[:category_search]}")
   end 
 
+  def checkout 
+    
+  end 
+
 end
