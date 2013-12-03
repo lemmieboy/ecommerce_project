@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
   def index
   	@products = Product.all
     @categories = Category.all
@@ -9,12 +10,10 @@ class ProductsController < ApplicationController
     end
   end
 
-
   def search_results
   	# Here we will be using the product model to actually search
-    @categories = Category.all
-    @products = Product.where("name LIKE ?", "%#{params[:keywords]}%")
-
+    # @products = Product.where("name LIKE ?", "%#{params[:keywords]}%")
+    @products = Product.where("name LIKE '%#{params[:keywords]}%' AND category_id = #{params[:category_search]}")
   end 
 
 end
