@@ -5,6 +5,7 @@
 	<div id="search">
 		<%= form_tag search_results_path do %>
 			<%= text_field_tag :keywords %>
+			<%= select_tag :category_search, options_for_select(@categories.collect{ |u| [u.name, u.id] }) %>
 			<%= submit_tag 'Search' %>
 		<% end %>
 	</div>
