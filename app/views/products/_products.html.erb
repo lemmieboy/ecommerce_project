@@ -4,7 +4,14 @@
 			<h3><%= product.name %> (<%= product.category.name %>)</h3><h3 id = "price">Price: <%= product.price %> CAD</h3>
 			<p id="img"><%= image_tag product.image_filename, :width => '100', :height => '100'%></p>
 			<p id="desc"><%= product.description %></p>
-			<%= submit_tag 'Add To Order', class: "add_to_cart" %>
+
+
+			<%= form_tag checkout_path do %>
+				<%= label_tag 'Quantity:'%> 
+				<%= text_field_tag :quantity, "", size: 1 %>
+				<%= submit_tag 'Add', class: "add_to_cart" %>
+			<% end %>
+
 		</div>
 	<% end %>
 </section>

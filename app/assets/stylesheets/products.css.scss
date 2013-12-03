@@ -56,7 +56,12 @@ p#desc {
 	margin-top: -60px;
 }
 
-.add_to_cart{
+#add_to_cart{
 	float: right;
 	margin-top: -20px;
+}
+
+#quantity_area {
+	position:absolute;
+	top:200px;
 }
