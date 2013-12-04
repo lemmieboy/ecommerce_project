@@ -18,14 +18,24 @@ class ProductsController < ApplicationController
   end 
 
   def checkout 
-    # @line_items = Line_items.new 
+    session[:line_item_ids] ||= []
 
-    # @line_items.name = product.name
-    # @line_items.quantity = params[:quantity]
-    # @line_items.price = product.price
+    if request.post?
+      product = Product.find(params[:product_id]) 
+      line_item = LineItem.new
+      line_item.product_id = product.id
 
-    # @line_items.save
 
-  end 
+      line_item.quantity = params[:quantity]
+      line_item.price = product.price
+
+      line_item.save
+
+      session[:line_item_ids] << line_item.id
+    end
+
+    @line_items = LineItem.find(session[:line_item_ids])
+    
+  end
 
 end

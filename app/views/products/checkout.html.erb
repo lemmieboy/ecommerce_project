@@ -1,3 +1,10 @@
 <%= render 'header' %>
 
 <h2>Products Ordered</h2>
+
+
+<% @line_items.each do |line_item| %>
+  <%= line_item.product.name %>
+  <%= line_item.quantity %>
+
+<% end %>

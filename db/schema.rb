@@ -66,29 +66,29 @@ ActiveRecord::Schema.define(:version => 20131126155307) do
 
   create_table "line_items", :force => true do |t|
     t.integer  "quantity"
-    t.decimal  "price"
+    t.decimal  "price",      :precision => 10, :scale => 0
     t.integer  "product_id"
     t.integer  "order_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "orders", :force => true do |t|
-    t.decimal  "tax_rate"
+    t.decimal  "tax_rate",    :precision => 10, :scale => 0
     t.integer  "customer_id"
     t.string   "status"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
   create_table "products", :force => true do |t|
     t.text     "description"
     t.string   "name"
-    t.decimal  "price"
+    t.decimal  "price",          :precision => 10, :scale => 0
     t.integer  "category_id"
     t.string   "image_filename"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
   end
 
   create_table "provinces", :force => true do |t|

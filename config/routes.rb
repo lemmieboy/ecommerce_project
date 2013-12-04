@@ -7,6 +7,8 @@ EcommerceProject::Application.routes.draw do
         :as => 'search_results', :via => :post
 
   match 'checkout' => 'products#checkout', :as => 'checkout', :via => :post
+ 
+  match 'checkout' => 'products#checkout', :as => 'checkout', :via => :get
 
   ActiveAdmin.routes(self)
 
