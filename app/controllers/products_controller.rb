@@ -18,7 +18,14 @@ class ProductsController < ApplicationController
   end 
 
   def checkout 
-    
+    # @line_items = Line_items.new 
+
+    # @line_items.name = product.name
+    # @line_items.quantity = params[:quantity]
+    # @line_items.price = product.price
+
+    # @line_items.save
+
   end 
 
 end
