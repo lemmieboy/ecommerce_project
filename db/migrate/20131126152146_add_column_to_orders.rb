@@ -1,4 +1,4 @@
-class CreateOrders < ActiveRecord::Migration
+class AddColumnToUsers < ActiveRecord::Migration
   def change
     add_column :orders, :tax_rate, :decimal
     add_column :orders, :customer_id, :integer
