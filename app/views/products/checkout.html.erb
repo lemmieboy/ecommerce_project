@@ -4,7 +4,10 @@
 
 
 <% @line_items.each do |line_item| %>
-  <%= line_item.product.name %>
-  <%= line_item.quantity %>
-
+	
+	<div class="checkoutproducts">
+		<%= image_tag line_item.product.image_filename, width: '150' %>
+		<p>Name: <%= line_item.product.name %></p>
+		<p>Quantity: <%= line_item.quantity %></p>
+	</div>
 <% end %>
