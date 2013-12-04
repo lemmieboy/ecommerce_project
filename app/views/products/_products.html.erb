@@ -6,6 +6,7 @@
 			<p id="desc"><%= product.description %></p>
 
 			<%= form_tag checkout_path do %>
+				<%= hidden_field_tag :product_id, product.id %>
 				<%= label_tag 'Quantity:'%> 
 				<%= text_field_tag :quantity, "", size: 1 %>
 				<%= submit_tag 'Add', class: "add_to_cart" %>
